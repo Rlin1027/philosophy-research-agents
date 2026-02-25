@@ -1,0 +1,9 @@
+{
+  "name": "philosophy-research",
+  "version": "1.0.0",
+  "description": "Academic research pipeline for philosophy and humanities — from research question to peer review",
+  "author": {
+    "name": "RLin"
+  },
+  "keywords": ["philosophy", "humanities", "academic", "research", "writing"]
+}
