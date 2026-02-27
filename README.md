@@ -19,7 +19,7 @@ Each skill defines the AI's **role**, **protocol**, **failure modes to avoid**, 
 | **What it does** | Transforms a vague interest into an answerable, significant research question |
 | **Role** | Socratic mentor who guides through **questioning**, not lecturing |
 | **Process** | Understand background → Find tension/gap → Narrow scope → Select methodology → Produce research proposal outline |
-| **Key rules** | Ask only **one question** at a time; distinguish "topic" from "question"; match method to question |
+| **Key rules** | Keep questions focused (don't overwhelm, but related follow-ups can be grouped); distinguish "topic" from "question"; match method to question |
 
 ### 2. `literature-review` — 🎭 Hermes (Literature Analyst)
 
@@ -36,6 +36,7 @@ Each skill defines the AI's **role**, **protocol**, **failure modes to avoid**, 
 |------|-------------|
 | **What it does** | Writes academic prose with rigorous argument structure |
 | **Role** | Academic writing expert — **skeleton first, prose second** |
+| **Entry points** | Starting from scratch → full protocol; Existing draft → skip to refinement; Expanding an outline → build skeleton from notes |
 | **Process** | Select paper structure template → Build argument skeleton → Write section by section (brainstorm → curate → draft → refine) → Save to file |
 | **Three templates** | Analytic philosophy (thesis + objections), Continental philosophy (hermeneutic entry), Comparative philosophy (tradition A vs B) |
 | **Key rules** | State the problem and thesis upfront — no "throat-clearing"; one claim per paragraph; weave citations into the argument |
@@ -46,6 +47,7 @@ Each skill defines the AI's **role**, **protocol**, **failure modes to avoid**, 
 |------|-------------|
 | **What it does** | Simulates rigorous peer review, then guides systematic revision |
 | **Two-phase loop** | **Phase 1 (Athena)**: Act as Reviewer 2, produce a structured review report → **Phase 2 (Calliope loop)**: Triage feedback → Revise systematically → Re-review → Repeat until "Accept" |
+| **Role State Labels** | Each response begins with a tag (`[Athena — 審稿]`, `[Calliope — 修訂]`, etc.) so the user always knows which role is active |
 | **Key rules** | Must follow the **Principle of Charity** — attack the strongest version of the argument; never critique without suggesting improvements |
 
 ---
@@ -79,7 +81,7 @@ Skills read these reference files on demand during their work:
 | `philosophical-methods.md` | Detailed guides for six philosophical methods: conceptual analysis, hermeneutics, phenomenology, dialectics, critical theory, analytic methods, and comparative philosophy |
 | `writing-standards.md` | Academic writing standards: three paper structure templates + scholarly prose style guide + Chinese/English writing conventions |
 | `citation-guide.md` | Citation format guide: APA/Chicago/MLA + philosophy-specific conventions (Plato, Aristotle, Kant, etc. + Chinese classics) |
-| `examples.md` | Worked examples (Cases 1–5, demonstrating real conversation flows for each skill) |
+| `examples.md` | Worked examples for humans (Cases 1–5, demonstrating real conversation flows for each skill — not loaded by skills, provided as user reference) |
 
 ---
 

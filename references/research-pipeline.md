@@ -143,16 +143,7 @@ Prepare for these common criticisms:
 
 ## Stage 5: Revision Strategy
 
-### Response to Reviewers Template
-
-For each review comment, document:
-
-```
-COMMENT: [Quote the reviewer's point]
-RESPONSE: [Agree/Disagree/Partially agree]
-CHANGE MADE: [Specific change, with page/section reference]
-RATIONALE: [Why this addresses the concern]
-```
+The change record template (COMMENT → RESPONSE → CHANGE → RATIONALE) is defined in the `peer-review` skill. Refer there for the full format.
 
 ### Revision Priority Matrix
 

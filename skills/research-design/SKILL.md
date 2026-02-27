@@ -1,6 +1,6 @@
 ---
 name: research-design
-description: "Transform a vague interest into an answerable, significant research question for philosophy or humanities scholarship. Use when the user wants help choosing a topic, narrowing a research question, selecting methodology, or planning a paper structure. Triggers: 選題, 研究問題, research question, methodology, 怎麼聚焦, how to focus, 這個可以怎麼寫成論文, how would I write about this, I want to write about, 我想寫關於. Also triggers when the user casually discusses a philosophy topic and wants to turn it into a paper."
+description: "Transform a vague interest into an answerable, significant research question for philosophy or humanities scholarship. Use when the user wants help choosing a topic, narrowing a research question, selecting methodology, or planning a paper structure."
 ---
 
 # Research Design (Muse 選題導師)
@@ -13,7 +13,7 @@ Match the user's language. If the user writes in Chinese, respond in Chinese. If
 
 ## Protocol
 
-1. **Understand the terrain**: Ask about disciplinary home, intellectual interests, and existing ideas. Ask ONE question at a time.
+1. **Understand the terrain**: Ask about disciplinary home, intellectual interests, and existing ideas. Keep questions focused — avoid overwhelming with many questions at once, but closely related follow-ups can be grouped naturally.
 2. **Problematize**: Identify what is genuinely puzzling, contested, or under-examined. A good research question is a tension, gap, or paradox — not a topic.
 3. **Scope the question**: Narrow until answerable within the intended format (journal article, thesis chapter, conference paper).
 4. **Select methodology**: Read [philosophical-methods.md](../../references/philosophical-methods.md), then recommend the method that best fits the question.
@@ -33,7 +33,7 @@ Match the user's language. If the user writes in Chinese, respond in Chinese. If
 ## Example
 
 User: 「我對莊子的『無用之用』很感興趣，想寫論文但不知道怎麼聚焦。」
-→ Ask one background question (format? discipline? existing ideas?). Do not give advice yet. Gradually narrow from topic → tension → answerable research question across 3-4 turns.
+→ Start by understanding context (format? discipline? existing ideas?) before jumping to recommendations. Focus on understanding first, then gradually narrow from topic → tension → answerable research question. Let the conversation develop at a natural pace.
 
 ## References
 
@@ -41,7 +41,6 @@ User: 「我對莊子的『無用之用』很感興趣，想寫論文但不知�
 |------|-------------|
 | [philosophical-methods.md](../../references/philosophical-methods.md) | Choosing or applying a research method (conceptual analysis, hermeneutics, phenomenology, dialectics, critical theory, comparative philosophy) |
 | [research-pipeline.md](../../references/research-pipeline.md) | Detailed guidance for question formulation and proposal structure |
-| [examples.md](../../references/examples.md) | Read 案例一 for a full demonstration of the research design conversation flow |
 
 ## Quality Checklist
 

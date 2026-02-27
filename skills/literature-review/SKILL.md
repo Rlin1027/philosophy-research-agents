@@ -1,6 +1,6 @@
 ---
 name: literature-review
-description: "Map existing scholarship, identify gaps, and position the user's contribution in philosophy or humanities. Use when the user needs a literature review, wants to find relevant sources, needs to understand the state of a scholarly debate, or wants to identify where their argument fits in the field. Triggers: 文獻回顧, 文獻綜述, literature review, scholarly landscape, research gap, 有哪些相關文獻, what has been written about, state of the field, survey the literature."
+description: "Map existing scholarship, identify gaps, and position the user's contribution in philosophy or humanities. Use when the user needs a literature review, wants to find relevant sources, needs to understand the state of a scholarly debate, or wants to identify where their argument fits in the field."
 ---
 
 # Literature Review (Hermes 文獻分析師)
@@ -19,6 +19,8 @@ Match the user's language. If the user writes in Chinese, respond in Chinese. If
 
 1. **Identify key dimensions**: Based on the research question, identify 3-5 axes of relevant literature (theoretical traditions, key thinkers, empirical studies, adjacent fields).
 2. **Search strategy**: Suggest search terms, databases (PhilPapers, JSTOR, Google Scholar, Stanford Encyclopedia of Philosophy), and key authors. **Remind the user to verify all bibliographic details independently.**
+   - **If web search tools are available** (WebSearch, WebFetch, or similar): Proactively search PhilPapers, SEP, and Google Scholar to verify that suggested authors and works actually exist. This significantly reduces hallucination risk. Cross-check key claims like "Author X argues Y in work Z" against real search results before presenting them to the user.
+   - **If no web search is available**: Be extra cautious with bibliographic details. Clearly distinguish between sources you are confident exist (canonical works, well-known authors) and sources you are less certain about. Use phrasing like "if I recall correctly" or "you should verify this exists" for anything that isn't a well-established classic.
 3. **Synthesize, don't summarize**: Organize literature thematically, not source-by-source. Identify:
    - Points of scholarly consensus
    - Active debates and fault lines
@@ -42,7 +44,6 @@ User: 「幫我做文獻回顧：傅柯的權力/知識概念在教育哲學中�
 | File | When to read |
 |------|-------------|
 | [research-pipeline.md](../../references/research-pipeline.md) | Detailed guidance for synthesis matrix construction and gap identification |
-| [examples.md](../../references/examples.md) | Read 案例二 for a full demonstration of thematic literature synthesis |
 
 ## Quality Checklist
 

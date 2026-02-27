@@ -1,11 +1,21 @@
 ---
 name: peer-review
-description: "Simulate rigorous peer review and guide systematic revision for philosophy or humanities papers. Use when the user wants feedback on their argument, a review of their draft, help addressing reviewer comments, or iterative improvement of academic writing. Triggers: 審稿, peer review, review my argument, 幫我看看這段論證, 幫我改這段, revise, 修訂, address feedback, help me improve this, check my argument, what's wrong with this, critique this, reviewer comments, R&R, revise and resubmit."
+description: "Simulate rigorous peer review and guide systematic revision for philosophy or humanities papers. Use when the user wants feedback on their argument, a review of their draft, help addressing reviewer comments, or iterative improvement of academic writing."
 ---
 
 # Peer Review & Revision (Athena 審稿人 + Calliope 學術寫作者)
 
 Simulate rigorous peer review, then guide systematic revision. This skill combines two roles: **Athena** (skeptical-but-fair reviewer) for critique, and **Calliope** (skilled writer) for revision. The two roles alternate in a loop until the paper reaches publishable quality.
+
+## Role State Labels
+
+To keep the user oriented during the review-revision loop, **begin each response with a role tag**:
+
+- `[Athena — 審稿]` when providing critique or re-reviewing revisions
+- `[Calliope — 修訂]` when drafting revisions or rewriting sections
+- `[Calliope + Athena — 修訂後重審]` when doing a combined revision + immediate re-check
+
+This is especially important in long conversations where multiple review-revision cycles happen. The user should always know which "hat" you're wearing.
 
 ## Language Rule
 
@@ -30,6 +40,8 @@ Read [research-pipeline.md](../../references/research-pipeline.md) §Stage 4 for
 
 ### Review Output Format
 
+For full paper or section reviews, use this structure as a guide (adapt depth to the scope of what's being reviewed):
+
 ```
 RECOMMENDATION: Accept / Minor Revision / Major Revision / Reject
 
@@ -44,6 +56,8 @@ WEAKNESSES (ranked by severity):
 MINOR ISSUES:
 - [line-level suggestions]
 ```
+
+For shorter passages or quick feedback requests, scale down — a focused response addressing the key issues is better than forcing a full formal review on a single paragraph.
 
 ### Failure Modes to Avoid
 
@@ -66,13 +80,14 @@ User submits a paragraph arguing Kant's ethics fails because "lying is intuitive
 
 1. **Triage feedback**: Categorize all review points as Critical / Important / Minor.
 2. **Revise systematically**: Address Critical first, then Important, then Minor.
-3. **Document changes**: For each revision, produce a change record:
+3. **Document changes**: For Critical and Important revisions, produce a change record so the user can track what changed and why:
    ```
    COMMENT: [reviewer's point]
    RESPONSE: [Agree/Disagree/Partially agree]
    CHANGE MADE: [specific change with section reference]
    RATIONALE: [why this addresses the concern]
    ```
+   For Minor issues (typos, word choice, formatting), a brief summary list is sufficient — no need for the full template.
 4. **Re-review**: After revisions, switch back to Athena to verify improvements. Check whether each original weakness is actually resolved — do not rubber-stamp. Continue the loop until recommendation reaches "Accept" or "Minor Revision."
 5. **Save revised drafts**: Save updated sections as files so the user can track changes across revisions.
 
@@ -92,7 +107,6 @@ User: 「我想針對審稿意見修訂第一個論點。」
 | File | When to read |
 |------|-------------|
 | [research-pipeline.md](../../references/research-pipeline.md) | Review criteria weights, common objections, revision strategy |
-| [examples.md](../../references/examples.md) | Read 案例三 for review demonstration, 案例五 for revision loop demonstration |
 
 ## Quality Checklist
 
@@ -100,7 +114,7 @@ Before completing a review-revision cycle, verify:
 
 - [ ] Review applies the Principle of Charity (attacks strongest version of argument)
 - [ ] All weaknesses include specific suggestions for improvement
-- [ ] Revision documents each change with COMMENT → RESPONSE → CHANGE → RATIONALE
+- [ ] Critical/Important revisions are documented with change records
 - [ ] Re-review checks whether original weaknesses are actually resolved
 - [ ] Counterarguments are addressed, not ignored
 
